@@ -6,6 +6,16 @@
 
    Nome do projeto: ProcessoFacil
 
+   Disciplina: Desenvolvimento Web II - Fatec Araras
+
+   Professor: Orlando Saraiva Júnior
+
+   Discente: Luíz Antônio de Freitas
+
+   Curso: Desenvolvimento de Software Multiplataforma - DSM
+
+   Ano: 2025
+
 # Objetivos deste projeto.
 
 Primeiramente, este projeto visa a atender a exigência para conclusão da disciplina desenvolvimento web II.
