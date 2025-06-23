@@ -1,7 +1,9 @@
 # PrjPHP_ProcessoFacil
 
    Repositorio do projeto: PrjPHP_ProcessoFacil.
+
    Link GitHub: https://github.com/Lafreit/PrjPHP_ProcessoFacil
+
    Nome do projeto: ProcessoFacil
 
 # Objetivos deste projeto.
@@ -16,7 +18,8 @@ O projeto ProcessoFacil, neste estágio de concepção, pretende ser um sistema 
 # Descrição acadêmica do Projeto "ProcessoFacil"
 
 O projeto ProcessoFácil é uma aplicação web desenvolvida em PHP com foco na gestão simplificada de processos jurídicos. Ele foi concebido para atender às necessidades de escritórios de advocacia ou profissionais do direito que buscam uma ferramenta eficiente para organizar informações de clientes, partes ex-adversas, advogados associados e os próprios processos.
-Arquitetura e Tecnologias Empregadas
+
+# Arquitetura e Tecnologias Empregadas
 
 A arquitetura do ProcessoFácil segue um padrão modular, com classes PHP dedicadas a diferentes entidades do domínio, como Processo, Cliente, Advogado, ParteExAdversa e Conexao. Essa abordagem promove a separação de responsabilidades e facilita a manutenção e escalabilidade do código.
 
@@ -38,11 +41,11 @@ Até o momento, o projeto abrange as seguintes funcionalidades essenciais para a
    2. Listagem de Processos: Apresenta uma visão geral de todos os processos cadastrados, exibindo informações cruciais como número do processo, data de protocolo, natureza da ação, e nomes do cliente e da parte ex-adversa.
    3. Visualização Detalhada do Processo: Permite consultar todos os dados de um processo específico, incluindo informações completas do cliente, da parte ex-adversa e dos advogados vinculados.
    4. Atualização de Processos: Oferece a capacidade de modificar os dados de um processo existente, incluindo as informações do cliente, da parte ex-adversa e a reassociação de advogados (removendo os antigos e adicionando/atualizando os novos).
-   5. Exclusão de Processos: Implementa a funcionalidade de remover um processo. Graças à configuração de ON DELETE CASCADE no esquema do banco de dados (presumivelmente), a exclusão de um processo principal automaticamente acarreta na exclusão de movimentações e associações de advogados relacionadas, garantindo a integridade dos dados. Adicionalmente, a lógica prevê a exclusão de registros de clientes e partes ex-adversas que não estejam mais associados a nenhum outro processo, otimizando o banco.
+   5. Exclusão de Processos: Implementa a funcionalidade de remover um processo. Graças à configuração de ON DELETE CASCADE no esquema do banco de dados, a exclusão de um processo principal automaticamente acarreta na exclusão de movimentações e associações de advogados relacionadas, garantindo a integridade dos dados. Adicionalmente, a lógica prevê a exclusão de registros de clientes e partes ex-adversas que não estejam mais associados a nenhum outro processo, otimizando o banco.
 
 # Formas de Acesso ao Sistema
 
-O ProcessoFácil, como uma aplicação web, é acessado via navegador através de um servidor web (como Apache ou Nginx) que hospeda os arquivos PHP. As principais formas de interação e acesso às funcionalidades são:
+O ProcessoFacil, como uma aplicação web, é acessado via navegador através de um servidor web (como Apache) que hospeda os arquivos PHP. As principais formas de interação e acesso às funcionalidades são:
 
    1. Via URL Direta: Cada funcionalidade ou página do sistema é acessada através de URLs específicas. Por exemplo:
       
@@ -54,7 +57,7 @@ O ProcessoFácil, como uma aplicação web, é acessado via navegador através d
       
       1.4. Formulário de Edição de Processo: http://localhost/ProcessoFacil/public/editar_processo.php?id=<ID_DO_PROCESSO>.
       
-      1.5. Execução de Exclusão: http://localhost/ProcessoFacil/public/deletar_processo.php?id=<ID_DO_PROCESSO>. (Importante: Para deleção, é altamente recomendável implementar uma confirmação via JavaScript ou um método POST para segurança).
+      1.5. Execução de Exclusão: http://localhost/ProcessoFacil/public/deletar_processo.php?id=<ID_DO_PROCESSO>.
    
    2. Interação por Formulários HTML: A criação e atualização de processos ocorrem através de formulários HTML, onde o usuário insere os dados, que são então enviados via método HTTP POST para os scripts PHP responsáveis pelo processamento e gravação no banco de dados.
    
